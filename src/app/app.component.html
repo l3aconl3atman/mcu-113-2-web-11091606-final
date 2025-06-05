@@ -1,1 +1,9 @@
-<app-product-card></app-product-card>
+<app-product-card>
+  [productName] = "xxxxx" [author] = "aaaa" [company] = "bbb" [isShow]="isShow"
+  [photoUrl]="photoUrl"
+</app-product-card>
+<app-pagination
+  [totalCount]="totalCount()"
+  [pageSize]="pageSize()"
+  [(pageIndex)]="pageIndex"
+></app-pagination>
