@@ -1,11 +1,9 @@
 import { Component, computed, signal } from '@angular/core';
-import { ProductCardComponent } from './product-card/product-card.component';
-import { PaginationComponent } from './pagination/pagination.component';
 import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [ProductCardComponent, PaginationComponent, HeaderComponent],
+  imports: [HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
