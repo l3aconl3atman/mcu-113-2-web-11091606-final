@@ -2,11 +2,11 @@ import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-product-page',
+  selector: 'app-cart-page',
   imports: [],
-  templateUrl: './product-page.component.html',
-  styleUrl: './product-page.component.scss',
+  templateUrl: './cart-page.component.html',
+  styleUrl: './cart-page.component.scss',
 })
-export class ProductPageComponent {
+export class CartPageComponent {
   private router = inject(Router);
 }
