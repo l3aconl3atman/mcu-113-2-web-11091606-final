@@ -1,28 +1,44 @@
-import { Component, Input } from '@angular/core';
+import { CurrencyPipe, DatePipe } from '@angular/common';
+import {
+  booleanAttribute,
+  Component,
+  HostBinding,
+  input,
+  numberAttribute,
+  output,
+} from '@angular/core';
 
 @Component({
   selector: 'app-product-card',
-  imports: [],
+  imports: [DatePipe, CurrencyPipe],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.scss',
 })
 export class ProductCardComponent {
-  @Input()
-  productName!: string;
+  readonly id = input.required<number>();
 
-  @Input()
-  author!: string;
+  readonly productName = input<string>();
 
-  @Input()
-  company!: string;
+  readonly authors = input<string[]>();
 
-  @Input()
-  isShow!: boolean;
+  readonly company = input<string>();
 
-  @Input()
-  photoUrl!: string;
+  readonly isShow = input.required<boolean, string | boolean>({
+    transform: booleanAttribute,
+  });
 
-  onSetDisplay(isShow: boolean): void {
-    this.isShow = isShow;
-  }
+  readonly photoUrl = input<string>();
+
+  readonly createDate = input<Date>();
+
+  readonly price = input<number, string | number>(0, {
+    transform: numberAttribute,
+  });
+
+  readonly add = output<void>();
+
+  readonly view = output<void>();
+
+  @HostBinding('class')
+  class = 'app-product-card';
 }
