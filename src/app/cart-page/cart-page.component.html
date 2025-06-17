@@ -1,1 +1,59 @@
-<p>cart-page works!</p>
+<div class="container">
+  <table class="personal-infor--container">
+    <tr class="top-row">
+      <td colspan="3">
+        <label>基本資料</label>
+      </td>
+    </tr>
+    <tr class="bottom-row">
+      <td colspan="1">
+        <table class="personal-infor">
+          <tr>
+            <label class="name">姓名</label>
+            <span>
+              <input type="text" formControlName="name" />
+            </span>
+            @if (name.hasError('required')) {
+            <div class="error-message">請輸入姓名</div>
+            }
+          </tr>
+          <tr>
+            <label class="address">地址</label>
+            <span>
+              <input type="text" formControlName="address" />
+            </span>
+            @if (address.hasError('required')) {
+            <div class="error-message">請輸入地址</div>
+            }
+          </tr>
+          <tr>
+            <label class="phoneNo">電話</label>
+            <span>
+              <input type="text" formControlName="phoneNo" />
+            </span>
+            @if (phoneNo.hasError('required')) {
+            <div class="error-message">請輸入電話號碼</div>
+            }
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <table class="cart-item--container">
+    <tr class="top-row">
+      <label>購買項目</label>
+    </tr>
+    <tr class="bottom-row">
+      <ng-container formArrayName="cartItem">
+        <div class="cart-item">
+          <div class="cart-column">
+            <div></div>
+          </div>
+        </div>
+      </ng-container>
+    </tr>
+  </table>
+</div>
+<div class="confirmBtn">
+  <button type="button">送出訂單</button>
+</div>

@@ -1,4 +1,71 @@
 :host {
   display: block;
   padding: 20px;
+
+  .container {
+    display: flex;
+    gap: 20px;
+
+    .cart-item {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .personal-infor--container {
+    width: 50%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    padding: 10px;
+
+    .top-row {
+      font-weight: 700;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+
+      td {
+        padding: 5px 10px;
+      }
+    }
+
+    .bottom-row td {
+      padding: 10px;
+    }
+
+    > input {
+      flex-grow: 1;
+      padding: 5px 10px;
+    }
+
+    .error-message {
+      margin-left: 250px;
+      color: red;
+    }
+  }
+
+  .personal-infor tr label {
+    margin-right: 10px;
+  }
+
+  .cart-item--container {
+    width: 50%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    padding: 10px;
+
+    .top-row {
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+
+  .confirmBtn {
+    text-align: center;
+    margin: 20px;
+
+    button {
+      padding: 5px 10px;
+      font-size: 0.75rem;
+    }
+  }
 }

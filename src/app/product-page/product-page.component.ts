@@ -28,7 +28,6 @@ export class ProductPageComponent {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this.productService = new ProductService();
     this.products = this.productService.getList();
   }
 }
