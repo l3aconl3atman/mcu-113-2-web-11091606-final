@@ -5,39 +5,41 @@
         <label>基本資料</label>
       </td>
     </tr>
-    <tr class="bottom-row">
-      <td colspan="1">
-        <table class="personal-infor">
-          <tr>
-            <label class="name">姓名</label>
-            <span>
-              <input type="text" formControlName="name" />
-            </span>
-            @if (name.hasError('required')) {
-            <div class="error-message">請輸入姓名</div>
-            }
-          </tr>
-          <tr>
-            <label class="address">地址</label>
-            <span>
-              <input type="text" formControlName="address" />
-            </span>
-            @if (address.hasError('required')) {
-            <div class="error-message">請輸入地址</div>
-            }
-          </tr>
-          <tr>
-            <label class="phoneNo">電話</label>
-            <span>
-              <input type="text" formControlName="phoneNo" />
-            </span>
-            @if (phoneNo.hasError('required')) {
-            <div class="error-message">請輸入電話號碼</div>
-            }
-          </tr>
-        </table>
-      </td>
-    </tr>
+    <div [formGroup]="form">
+      <tr class="bottom-row">
+        <td colspan="1">
+          <table class="personal-infor">
+            <tr>
+              <label class="name">姓名</label>
+              <span>
+                <input type="text" formControlName="name" />
+              </span>
+              @if (name.hasError('required')) {
+              <div class="error-message">請輸入姓名</div>
+              }
+            </tr>
+            <tr>
+              <label class="address">地址</label>
+              <span>
+                <input type="text" formControlName="address" />
+                @if (address.hasError('required')) {
+                <div class="error-message">請輸入地址</div>
+                }
+              </span>
+            </tr>
+            <tr>
+              <label class="phoneNo">電話</label>
+              <span>
+                <input type="text" formControlName="phoneNo" />
+                @if (phoneNo.hasError('required')) {
+                <div class="error-message">請輸入電話號碼</div>
+                }
+              </span>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </div>
   </table>
   <table class="cart-item--container">
     <tr class="top-row">

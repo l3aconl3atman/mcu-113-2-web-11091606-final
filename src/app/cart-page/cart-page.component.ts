@@ -1,14 +1,24 @@
-import { Component, inject } from '@angular/core';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, inject, OnInit } from '@angular/core';
+import {
+  FormArray,
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart-page',
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './cart-page.component.html',
   styleUrl: './cart-page.component.scss',
 })
-export class CartPageComponent {
+export class CartPageComponent implements OnInit {
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+
   private router = inject(Router);
 
   form = new FormGroup({
@@ -18,7 +28,7 @@ export class CartPageComponent {
     address: new FormControl<string | null>(null, {
       validators: [Validators.required],
     }),
-    phoneNo: new FormControl<number | null>(null, {
+    phoneNo: new FormControl<string | null>(null, {
       validators: [Validators.required],
     }),
   });
