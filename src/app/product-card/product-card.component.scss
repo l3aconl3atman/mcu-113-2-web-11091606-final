@@ -1,0 +1,37 @@
+:host {
+  border: solid 1px #999;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+  gap: 10px;
+
+  div {
+    &.company,
+    &.button {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &.button {
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 16px;
+
+        &.product-detail {
+          background-color: #eee;
+          color: black;
+        }
+
+        &.add-to-cart {
+          background-color: #007bff;
+          color: white;
+        }
+      }
+    }
+  }
+}
