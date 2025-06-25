@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ProductCardComponent } from '../product-card/product-card.component';
+import { Product } from '../models/product';
 
 @Component({
   selector: 'app-product-card-list',
@@ -8,9 +9,5 @@ import { ProductCardComponent } from '../product-card/product-card.component';
   styleUrl: './product-card-list.component.scss',
 })
 export class ProductCardListComponent {
-  productName = 'A 產品';
-  author = '作者 A, 作者 B, 作者 C';
-  company = '博碩文化';
-  photoUrl = 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img';
-  price = 10000;
+  @Input() products!: Product[];
 }

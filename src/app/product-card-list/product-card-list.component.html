@@ -1,11 +1,13 @@
-<!-- @for (product of products(); track $index) { -->
+@for (product of products; track $index) {
 <app-product-card
-  [photoUrl]="photoUrl"
-  [productName]="productName"
-  [author]="author"
-  [company]="company"
-  [price]="price"
+  [id]="product.id"
+  [photoUrl]="product.photoUrl"
+  [productName]="product.name"
+  [author]="product.authors"
+  [company]="product.company"
+  [price]="product.price"
 ></app-product-card>
-<!-- } @empty {
+}
+<!-- @empty {
 <div class="data-empty">無產品資料</div>
 } -->
