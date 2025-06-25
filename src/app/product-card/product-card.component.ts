@@ -7,6 +7,10 @@ import { Component, Input } from '@angular/core';
   styleUrl: './product-card.component.scss',
 })
 export class ProductCardComponent {
+  productName = 'A 產品';
+  authors = '作者 A, 作者 B, 作者 C';
+  company = '博碩文化';
+
   // @Input({ required: true }) productName!: string;
   // @Input({ required: true }) author!: string;
   // @Input({ required: true }) company!: string;
