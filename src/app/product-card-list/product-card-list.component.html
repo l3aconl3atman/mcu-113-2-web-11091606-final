@@ -1,5 +1,10 @@
 <!-- @for (product of products(); track $index) { -->
-<app-product-card></app-product-card>
+<app-product-card
+  [photoUrl]="photoUrl"
+  [productName]="productName"
+  [author]="author"
+  [company]="company"
+></app-product-card>
 <!-- } @empty {
 <div class="data-empty">無產品資料</div>
 } -->
