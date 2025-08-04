@@ -1,0 +1,37 @@
+:host {
+  display: block;
+  padding: 20px;
+
+  .toolbar {
+    margin-bottom: 20px;
+    display: flex;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: solid 1px #007bff;
+    color: #007bff;
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #007bff1a;
+    }
+
+    &:active {
+      background-color: #007bff33;
+    }
+  }
+
+  input[type="text"] {
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    border: solid 1px #007bff;
+    border-radius: 10px;
+  }
+}
