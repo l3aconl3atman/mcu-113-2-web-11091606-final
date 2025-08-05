@@ -1,0 +1,30 @@
+:host {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  button {
+    padding: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    border: none;
+    font-size: 20px;
+    transition: all ease-in-out 0.3s;
+    // color: #005cbb;
+    // border: 1px solid #005cbb;
+
+    &:hover {
+      color: #222;
+      background-color: #56abffcc;
+    }
+
+    &.active {
+      color: white;
+      background-color: #005cbb;
+    }
+  }
+}
