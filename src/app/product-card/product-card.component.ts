@@ -1,4 +1,4 @@
-import { DatePipe } from '@angular/common';
+import { CurrencyPipe, DatePipe } from '@angular/common';
 import {
   booleanAttribute,
   Component,
@@ -10,7 +10,7 @@ import {
 
 @Component({
   selector: 'app-product-card',
-  imports: [DatePipe],
+  imports: [DatePipe, CurrencyPipe],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.scss',
 })
@@ -22,6 +22,7 @@ export class ProductCardComponent {
   isShow = input.required<boolean, boolean>({ transform: booleanAttribute });
   isShowChange = output<boolean>();
   photoUrl = input.required<string>();
+  price = input.required<number>();
 
   createDate = input<Date>();
 

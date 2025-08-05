@@ -16,6 +16,8 @@ export class ProductPageComponent {
 
   createDate = new Date('2025/8/5');
 
+  price = 10000;
+
   onSetDisplay(isShow: boolean) {
     this.isShow = isShow;
   }
