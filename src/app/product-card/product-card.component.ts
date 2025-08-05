@@ -18,7 +18,7 @@ import {
 export class ProductCardComponent {
   @Input({ required: true, transform: numberAttribute }) id!: number;
   productName = input.required<string>();
-  author = input.required<string>();
+  authors = input.required<string[]>();
   company = input.required<string>();
   isShow = input.required<boolean, boolean>({ transform: booleanAttribute });
   isShowChange = output<boolean>();
