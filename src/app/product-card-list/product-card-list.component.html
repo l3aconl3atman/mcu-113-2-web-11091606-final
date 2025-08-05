@@ -1,46 +1,12 @@
-<!-- @for (item of items; track $index) { -->
+@for (product of products; track product.id) {
 <app-product-card
-  id="1"
-  [productName]="productName"
-  [author]="author"
-  [company]="company"
-  [isShow]="isShow"
-  [photoUrl]="photoUrl"
-  [createDate]="createDate"
-  (isShowChange)="onSetDisplay($event)"
-  [price]="price"
+  [id]="product.id"
+  [productName]="product.name"
+  [author]="product.authors"
+  [company]="product.company"
+  [isShow]="product.isShow"
+  [photoUrl]="product.photoUrl"
+  [createDate]="product.createDate"
+  [price]="product.price"
 />
-<app-product-card
-  id="1"
-  [productName]="productName"
-  [author]="author"
-  [company]="company"
-  [isShow]="isShow"
-  [photoUrl]="photoUrl"
-  [createDate]="createDate"
-  (isShowChange)="onSetDisplay($event)"
-  [price]="price"
-/>
-<app-product-card
-  id="1"
-  [productName]="productName"
-  [author]="author"
-  [company]="company"
-  [isShow]="isShow"
-  [photoUrl]="photoUrl"
-  [createDate]="createDate"
-  (isShowChange)="onSetDisplay($event)"
-  [price]="price"
-/>
-<app-product-card
-  id="1"
-  [productName]="productName"
-  [author]="author"
-  [company]="company"
-  [isShow]="isShow"
-  [photoUrl]="photoUrl"
-  [createDate]="createDate"
-  (isShowChange)="onSetDisplay($event)"
-  [price]="price"
-/>
-<!-- } -->
+}
