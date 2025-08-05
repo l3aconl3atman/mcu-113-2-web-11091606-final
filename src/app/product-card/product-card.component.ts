@@ -2,6 +2,7 @@ import { CurrencyPipe, DatePipe } from '@angular/common';
 import {
   booleanAttribute,
   Component,
+  HostBinding,
   Input,
   input,
   numberAttribute,
@@ -25,6 +26,9 @@ export class ProductCardComponent {
   price = input.required<number>();
 
   createDate = input<Date>();
+
+  @HostBinding('class')
+  class = 'app-product-card';
 
   onSetDisplay(isShow: boolean): void {
     this.isShowChange.emit(isShow);
