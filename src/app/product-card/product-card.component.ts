@@ -2,6 +2,7 @@ import { DatePipe } from '@angular/common';
 import {
   booleanAttribute,
   Component,
+  HostBinding,
   Input,
   input,
   numberAttribute,
@@ -15,17 +16,15 @@ import {
   styleUrl: './product-card.component.scss',
 })
 export class ProductCardComponent {
-  @Input({ required: true, transform: numberAttribute }) id!: number;
+  // @Input({ required: true, transform: numberAttribute }) id!: number;
+  id = input.required<number>();
   productName = input.required<string>();
   author = input.required<string>();
   company = input.required<string>();
-  isShow = input.required<boolean, boolean>({ transform: booleanAttribute });
-  isShowChange = output<boolean>();
   photoUrl = input.required<string>();
 
   createDate = input<Date>();
 
-  onSetDisplay(isShow: boolean): void {
-    this.isShowChange.emit(isShow);
-  }
+  @HostBinding('class')
+  class = 'app-product-card';
 }
