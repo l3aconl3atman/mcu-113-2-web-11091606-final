@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { PaginationComponent } from './../pagination/pagination.component';
-import { ProductCardListComponent } from '../product-card-list/product-card-list.component';
 import { Product } from '../models/product';
+import { ProductCardListComponent } from '../product-card-list/product-card-list.component';
 
 @Component({
   selector: 'app-product-page',
-  imports: [PaginationComponent, ProductCardListComponent],
+  imports: [ProductCardListComponent],
   templateUrl: './product-page.component.html',
   styleUrl: './product-page.component.scss',
 })

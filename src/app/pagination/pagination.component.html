@@ -2,7 +2,7 @@
 <button
   type="button"
   [class.active]="pageIndex() === i"
-  (click)="pageIndexChange.emit(i)"
+  (click)="pageIndex.set(i)"
 >
   {{ i }}
 </button>
