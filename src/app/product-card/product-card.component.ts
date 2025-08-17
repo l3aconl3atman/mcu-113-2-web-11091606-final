@@ -19,7 +19,7 @@ export class ProductCardComponent {
   // @Input({ required: true, transform: numberAttribute }) id!: number;
   id = input.required<number>();
   productName = input.required<string>();
-  author = input.required<string>();
+  authors = input.required<string[]>();
   company = input.required<string>();
   photoUrl = input.required<string>();
 

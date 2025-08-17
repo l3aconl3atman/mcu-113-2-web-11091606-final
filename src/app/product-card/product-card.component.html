@@ -3,7 +3,13 @@
   <strong>{{ id() }}. {{ productName() }}</strong>
   <span>{{ createDate() | date : "d/M/yy h:mm" }}</span>
 </div>
-<div>{{ author() }}</div>
+<div>
+  @for (author of authors(); track $index) {
+  <span>{{ author }}</span>
+  @if (!$last) {
+  <span>, </span>
+  } }
+</div>
 <div class="company">
   <span>{{ company() }}</span>
   <span>$10,000</span>
