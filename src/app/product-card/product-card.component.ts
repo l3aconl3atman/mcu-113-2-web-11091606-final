@@ -1,4 +1,4 @@
-import { DatePipe } from '@angular/common';
+import { CurrencyPipe, DatePipe } from '@angular/common';
 import {
   booleanAttribute,
   Component,
@@ -11,19 +11,22 @@ import {
 
 @Component({
   selector: 'app-product-card',
-  imports: [DatePipe],
+  imports: [DatePipe, CurrencyPipe],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.scss',
 })
 export class ProductCardComponent {
-  // @Input({ required: true, transform: numberAttribute }) id!: number;
-  id = input.required<number>();
-  productName = input.required<string>();
-  authors = input.required<string[]>();
-  company = input.required<string>();
-  photoUrl = input.required<string>();
-
-  createDate = input<Date>();
+  readonly id = input.required<number, string | number>({
+    transform: numberAttribute,
+  });
+  readonly productName = input.required<string>();
+  readonly authors = input.required<string[]>();
+  readonly company = input.required<string>();
+  readonly photoUrl = input.required<string>();
+  readonly price = input<number, number | string>(0, {
+    transform: numberAttribute,
+  });
+  readonly createDate = input<Date>();
 
   @HostBinding('class')
   class = 'app-product-card';
