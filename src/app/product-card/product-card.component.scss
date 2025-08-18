@@ -21,10 +21,23 @@
         border: none;
         border-radius: 20px;
         cursor: pointer;
+        transition: all linear 0.3s;
+
+        &.details {
+          background-color: #bbb;
+
+          &:hover {
+            background-color: #ccc;
+          }
+        }
 
         &.add-to-cart {
           background-color: #007bff;
           color: white;
+
+          &:hover {
+            background-color: #007bffdd;
+          }
         }
       }
     }

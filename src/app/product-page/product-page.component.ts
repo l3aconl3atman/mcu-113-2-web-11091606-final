@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Product } from '../models/product';
 import { ProductCardListComponent } from '../product-card-list/product-card-list.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-page',
@@ -9,6 +10,8 @@ import { ProductCardListComponent } from '../product-card-list/product-card-list
   styleUrl: './product-page.component.scss',
 })
 export class ProductPageComponent {
+  private router = inject(Router);
+
   products = [
     new Product({
       id: 1,
@@ -51,4 +54,8 @@ export class ProductPageComponent {
       photoUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
     }),
   ];
+
+  onView(product: Product): void {
+    this.router.navigate(['product', product.id]);
+  }
 }

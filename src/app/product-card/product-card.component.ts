@@ -1,9 +1,7 @@
 import { CurrencyPipe, DatePipe } from '@angular/common';
 import {
-  booleanAttribute,
   Component,
   HostBinding,
-  Input,
   input,
   numberAttribute,
   output,
@@ -27,6 +25,7 @@ export class ProductCardComponent {
     transform: numberAttribute,
   });
   readonly createDate = input<Date>();
+  readonly view = output<void>();
 
   @HostBinding('class')
   class = 'app-product-card';
