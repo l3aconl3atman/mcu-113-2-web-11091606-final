@@ -7,3 +7,9 @@
   (view)="onView($event)"
   (add)="onAdd($event)"
 />
+<app-pagination
+  [pageIndex]="pageIndex"
+  [pageSize]="pageSize"
+  [totalCount]="totalCount"
+  (pageIndexChange)="onPageChange($event)"
+/>
