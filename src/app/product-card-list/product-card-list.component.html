@@ -7,6 +7,7 @@
   [photoUrl]="product.photoUrl"
   [createDate]="product.createDate"
   (view)="view.emit(product)"
+  (add)="add.emit(product)"
 />
 }
 <app-pagination

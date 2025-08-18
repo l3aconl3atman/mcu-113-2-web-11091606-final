@@ -58,4 +58,8 @@ export class ProductPageComponent {
   onView(product: Product): void {
     this.router.navigate(['product', product.id]);
   }
+
+  onAdd(product: Product): void {
+    console.log(product);
+  }
 }

@@ -18,14 +18,22 @@ export class ProductCardComponent {
     transform: numberAttribute,
   });
   readonly productName = input.required<string>();
+
   readonly authors = input.required<string[]>();
+
   readonly company = input.required<string>();
+
   readonly photoUrl = input.required<string>();
+
   readonly price = input<number, number | string>(0, {
     transform: numberAttribute,
   });
+
   readonly createDate = input<Date>();
+
   readonly view = output<void>();
+
+  readonly add = output<void>();
 
   @HostBinding('class')
   class = 'app-product-card';
