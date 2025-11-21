@@ -1,22 +1,23 @@
 <img [src]="photoUrl()" alt="" />
 <div class="content">
   <strong>{{ id() }}. {{ productName() }}</strong>
-  <span>{{ createDate() | date : "d/M/yy h:mm" }}</span>
+  <span>{{ createDate() | date: "d/M/yy h:mm" }}</span>
 </div>
 <div>
   @for (author of authors(); track $index) {
-  <span>{{ author }}</span>
-  @if (!$last) {
-  <span>, </span>
-  }}
+    <span>{{ author }}</span>
+    @if (!$last) {
+      <span>, </span>
+    }
+  }
 </div>
 <div class="company">
   <span>{{ company() }}</span>
-  <span>{{ price() | currency : "$" : "symbol" : "4.0" }}</span>
+  <span>{{ price() | currency: "$" : "symbol" : "4.0" }}</span>
 </div>
 <div class="button">
   <button type="button" class="details" (click)="view.emit()">明細</button>
-  <button type="button" class="add-to-cart" (click)="add.emit()">
+  <button type="button" class="add-to-cart" (click)="onAddToCart()">
     加入購物車
   </button>
 </div>

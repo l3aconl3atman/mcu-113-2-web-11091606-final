@@ -2,10 +2,13 @@ import { CurrencyPipe, DatePipe } from '@angular/common';
 import {
   Component,
   HostBinding,
+  Input,
   input,
   numberAttribute,
   output,
 } from '@angular/core';
+import { Product } from '../models/product';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-product-card',
@@ -37,4 +40,14 @@ export class ProductCardComponent {
 
   @HostBinding('class')
   class = 'app-product-card';
+
+  // product = input<Product[]>();
+
+  @Input({ required: true }) product!: Product;
+
+  constructor(private cartService: CartService) {}
+
+  onAddToCart(): void {
+    this.cartService.addToCart(this.product);
+  }
 }

@@ -1,15 +1,16 @@
 @for (product of products(); track $index) {
-<app-product-card
-  [id]="product.id"
-  [productName]="product.name"
-  [authors]="product.authors"
-  [company]="product.company"
-  [photoUrl]="product.photoUrl"
-  [price]="product.price"
-  [createDate]="product.createDate"
-  (view)="view.emit(product)"
-  (add)="add.emit(product)"
-/>
+  <app-product-card
+    [product]="product"
+    [id]="product.id"
+    [productName]="product.name"
+    [authors]="product.authors"
+    [company]="product.company"
+    [photoUrl]="product.photoUrl"
+    [price]="product.price"
+    [createDate]="product.createDate"
+    (view)="view.emit(product)"
+    (add)="add.emit(product)"
+  />
 }
 <app-pagination
   [totalCount]="products.length"

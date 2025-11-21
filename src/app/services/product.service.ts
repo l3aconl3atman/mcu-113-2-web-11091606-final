@@ -96,12 +96,25 @@ export class ProductService {
       photoUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
       price: 10000,
     }),
+    new Product({
+      id: 11,
+      name: '書籍 K',
+      authors: ['作者甲', '作者乙', '作者丙'],
+      company: '博碩文化',
+      createDate: new Date('2025/8/5'),
+      photoUrl: 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img',
+      price: 10000,
+    }),
   ];
+
+  getById(productId: number): Product {
+    return this._data.find(({ id }) => id === productId)!;
+  }
 
   getList(
     name: string | undefined,
     index: number,
-    size: number
+    size: number,
   ): { data: Product[]; count: number } {
     const startIndex = (index - 1) * size;
     const endIndex = startIndex + size;

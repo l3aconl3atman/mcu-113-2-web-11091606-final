@@ -3,6 +3,7 @@ import { Product } from '../models/product';
 import { CurrencyPipe } from '@angular/common';
 
 import { Router } from '@angular/router';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-product-detail-page',
@@ -21,6 +22,8 @@ export class ProductDetailPageComponent {
   });
 
   readonly router = inject(Router);
+
+  private productService = inject(ProductService);
 
   onBack(): void {
     this.router.navigate(['products']);
