@@ -1,45 +1,4 @@
-<!-- <div class="container">
-  <div class="form-item">
-    <div class="form-column">
-      <label>名稱</label>
-      <input type="text" formControlName="name" />
-    </div>
-    <div class="error-message">請輸入產品名稱</div>
-  </div>
-  <div class="form-item">
-    <div class="form-column">
-      <label>作者</label>
-    </div>
-  </div>
-  <ng-container formArrayName="authors">
-    <div class="form-item">
-      <div class="form-column">
-        <div></div>
-        <input type="text" />
-      </div>
-      <div class="error-message">請輸入作者</div>
-    </div>
-  </ng-container>
-  <div class="form-item">
-    <div class="form-column">
-      <label>出版社</label>
-      <input type="text" formControlName="company" />
-    </div>
-    <div class="error-message">請輸入出版社</div>
-  </div>
-  <div class="form-item">
-    <div class="form-column">
-      <label>單價</label>
-      <input type="text" formControlName="price" />
-    </div>
-    <div class="error-message">請輸入單價</div>
-  </div>
-  <div class="form-action">
-    <button type="button">取消</button>
-    <button type="button" class="save">儲存</button>
-  </div>
-</div> -->
-<div class="cart-page" [formGroup]="form">
+<form class="cart-page" [formGroup]="form">
   <table class="information">
     <tr>
       <th>基本資料</th>
@@ -100,4 +59,4 @@
       </td>
     </tr>
   </table>
-</div>
+</form>

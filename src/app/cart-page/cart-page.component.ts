@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, inject, output } from '@angular/core';
 import {
   ReactiveFormsModule,
   FormControl,
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-cart-page',
