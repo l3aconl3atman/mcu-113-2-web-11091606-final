@@ -1,0 +1,45 @@
+<table class="information">
+  <tr>
+    <th>基本資料</th>
+  </tr>
+  <tr>
+    <td>
+      <form
+        class="cart-page"
+        [formGroup]="personalInformationForm"
+        (submit)="submitInformation()"
+      >
+        <div class="container">
+          <div class="form-item">
+            <div class="form-column">
+              <label for="name">姓名</label>
+              <input id="name" type="text" formControlName="name" />
+            </div>
+            @if (name.hasError("required")) {
+              <div class="error-message">請輸入姓名</div>
+            }
+          </div>
+          <div class="form-item">
+            <div class="form-column">
+              <label for="address">地址</label>
+              <input id="address" type="text" formControlName="address" />
+            </div>
+            @if (address.hasError("required")) {
+              <div class="error-message">請輸入地址</div>
+            }
+          </div>
+          <div class="form-item">
+            <div class="form-column">
+              <label for="phoneNum">電話</label>
+              <input id="phoneNum" type="text" formControlName="phoneNum" />
+            </div>
+            @if (phoneNum.hasError("required")) {
+              <div class="error-message">請輸入電話號碼</div>
+            }
+          </div>
+          <button type="submit">結賬</button>
+        </div>
+      </form>
+    </td>
+  </tr>
+</table>

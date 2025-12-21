@@ -1,0 +1,64 @@
+.cart-page {
+  margin: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  //   background-color: #ddd;
+}
+
+.container {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .form-item {
+    display: flex;
+    flex-direction: column;
+
+    .form-column {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      span {
+        border: 1px solid #aaa;
+        padding: 0 2rem;
+        border-radius: 4px;
+      }
+
+      button.delete {
+        color: rgb(156, 12, 12);
+        border-radius: 0;
+        background-color: white;
+        border: 1px solid rgb(156, 12, 12);
+        padding: 4px;
+      }
+    }
+  }
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  background-color: white;
+  height: 100%;
+}
+
+table.information {
+  flex: 1 1 auto;
+}
+
+table.cart {
+  flex: 3 1 auto;
+}
+
+table th {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.error-message {
+  color: rgb(156, 12, 12);
+}

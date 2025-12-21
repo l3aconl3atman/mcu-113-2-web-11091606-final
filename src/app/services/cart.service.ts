@@ -24,6 +24,10 @@ export class CartService {
     // this._cartItems().push();
   }
 
+  submitInformation(name: string, address: string, phoneNum: string) {
+    console.log(name, address, phoneNum);
+  }
+
   /* Delete items from Cart */
   // delete(id: Product[]): void {
   //   this.emit;
