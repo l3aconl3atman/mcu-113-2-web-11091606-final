@@ -49,13 +49,4 @@ export class PersonalInfoComponent {
       string | null
     >;
   }
-
-  submitInformation() {
-    console.log('Submit Button has been Clicked!');
-    this.cartService.submitInformation(
-      this.personalInformationForm.value.name ?? '',
-      this.personalInformationForm.value.address ?? '',
-      this.personalInformationForm.value.phoneNum ?? '',
-    );
-  }
 }

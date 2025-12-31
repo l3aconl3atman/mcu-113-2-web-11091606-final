@@ -20,16 +20,32 @@ export class CartService {
 
   addToCart(product: Product) {
     this._cartItems.update((items) => [...items, product]);
-    // console.log(this._cartItems());
-    // this._cartItems().push();
-  }
-
-  submitInformation(name: string, address: string, phoneNum: string) {
-    console.log(name, address, phoneNum);
   }
 
   /* Delete items from Cart */
   // delete(id: Product[]): void {
   //   this.emit;
   // }
+
+  readonly groupedCartItems = computed(() => {
+    const items = this._cartItems();
+
+    const map = new Map<number, { product: Product; quantity: number }>();
+
+    for (const product of items) {
+      if (map.has(product.id)) {
+        map.get(product.id)!.quantity++;
+      } else {
+        map.set(product.id, { product, quantity: 1 });
+      }
+    }
+
+    return Array.from(map.values());
+  });
+
+  removeProducts(productId: number) {
+    this._cartItems.update((items) =>
+      items.filter((item) => item.id !== productId),
+    );
+  }
 }

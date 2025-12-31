@@ -1,22 +1,19 @@
-<table class="cart">
-  <tr>
-    <th>購買項目</th>
-  </tr>
-  <tr>
-    <td>
-      <div class="container">
-        <!-- @for (product of products(); track $index) { -->
+<tr>
+  <td>
+    <div class="container">
+      @for (product of products(); track product.product.id) {
         <div class="form-item">
           <div class="form-column">
-            <label for="">id. 1</label>
-            <p>name. 書籍 K</p>
-            <span>1</span>
-            <div>$10,000</div>
-            <button class="delete">刪除</button>
+            <label for="">{{ product.product.id }}</label>
+            <p>{{ product.product.name }}</p>
+            <span>{{ product.quantity }}</span>
+            <div>{{ product.product.price }}</div>
+            <button class="delete" (click)="onDelete(product.product.id)">
+              刪除
+            </button>
           </div>
         </div>
-        <!-- } -->
-      </div>
-    </td>
-  </tr>
-</table>
+      }
+    </div>
+  </td>
+</tr>
