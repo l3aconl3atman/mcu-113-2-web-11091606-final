@@ -1,1 +1,13 @@
-<main class="cart-page"><app-personal-info /> <app-cart-items /></main>
+<main class="cart-page">
+  <app-personal-info />
+  <table class="cart">
+    <tr>
+      <th>購買項目</th>
+    </tr>
+    @if (cartService.cartItems().length === 0) {
+      <p>購物車目前沒有商品</p>
+    } @else {
+      <app-cart-items />
+    }
+  </table>
+</main>
